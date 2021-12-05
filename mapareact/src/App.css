@@ -9,7 +9,73 @@
 }
 
 .InfoPopUp {
-  width: 30vw;
+  position: absolute;
+  display: grid;
+  grid-template-areas:
+    "photo"
+    "name"
+    "aplications"
+    "description";
+  grid-template-columns: auto;
+  grid-template-rows: 6fr 3fr 5fr 8fr;
+  left: 0;
+  top: 0;
+  width: 408px;
   height: 100vh;
   z-index: 1000;
+  background-color: white;
+}
+
+.photo {
+  grid-area: photo;
+}
+
+.name {
+  grid-area: name;
+}
+
+.aplications {
+  grid-area: aplications;
+  border: 1px solid black;
+}
+
+.description {
+  grid-area: description;
+}
+
+.closeButtom {
+  width: 50px;
+  height: 50px;
+}
+
+/* CSSTransition classes  */
+.popUp-appear {
+  opacity: 0.01;
+  transform: translate(0, -10px);
+}
+.popUp-appear-active {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: all 300ms ease-in-out;
+}
+
+.popUp-exit {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.popUp-exit-active {
+  opacity: 0.01;
+  transform: translate(0, -10px);
+  transition: all 300ms ease-in;
+}
+
+/*  */
+
+.searcher {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+
+  border: 1px solid black;
 }
