@@ -15,9 +15,10 @@
     "photo"
     "name"
     "aplications"
-    "description";
+    "description"
+    "photos";
   grid-template-columns: auto;
-  grid-template-rows: 6fr 3fr 5fr 8fr;
+  grid-template-rows: 5fr 2fr 2fr 6fr 2fr;
   left: 0;
   top: 0;
   width: 408px;
@@ -32,20 +33,25 @@
 
 .name {
   grid-area: name;
+  padding-left: 20px;
 }
 
 .aplications {
   grid-area: aplications;
-  border: 1px solid black;
+  border-top: 1px solid rgb(180, 180, 180);
+  border-bottom: 1px solid rgb(180, 180, 180);
+  padding-left: 20px;
 }
 
 .description {
   grid-area: description;
+  padding-left: 20px;
 }
 
-.closeButtom {
-  width: 50px;
-  height: 50px;
+.photos {
+  grid-area: photos;
+  border-top: 1px solid rgb(180, 180, 180);
+  padding-left: 20px;
 }
 
 /* CSSTransition classes  */
@@ -73,9 +79,54 @@
 
 .searcher {
   position: fixed;
+  z-index: 1100;
   left: 0;
   top: 0;
+  width: 392px;
+  height: 48px;
+  border: 0;
+  margin-left: 8px;
+  margin-top: 8px;
+  background-color: white;
+  border-radius: 8px;
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 1px 1px 1px 1px rgb(180, 180, 180);
+}
 
-  border: 1px solid black;
+.searcher input {
+  width: 60%;
+  height: 24px;
+  border: 0;
+}
+
+.searchButtom {
+  width: 54px;
+  height: 48px;
+  border: 0;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.searchButtom svg {
+  width: 22px;
+  height: 22px;
+}
+
+.line {
+  position: absolute;
+  margin-top: 15px;
+  margin-right: 45px;
+  border-left: 1 px solid #ddd;
+  padding: 0;
+  height: 28px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none;
 }
