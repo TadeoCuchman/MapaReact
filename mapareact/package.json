@@ -1,8 +1,8 @@
 {
   "name": "mapareact",
   "version": "0.1.0",
-  "private": true,
-  "homepage": "https://tadeocuchman.github.io/MapaReact",
+  "private": false,
+  "homepage": "https://tadeocuchman.github.io/MapaReact/",
   "dependencies": {
     "leaflet": "^1.7.1",
     "react": "^17.0.2",

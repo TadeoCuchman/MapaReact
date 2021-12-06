@@ -26,7 +26,7 @@ const Home = () => {
     }, [])
 
     return (
-        <div>
+        <div id='home'>
             <h1>Geolocation</h1>
             <p>latitude: {state.lat}</p>
             <p>longitude: {state.lng}</p>

@@ -7,7 +7,20 @@
   position: absolute;
   right: 56px;
 }
+/* Home */
 
+#home {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  align-content: start;
+  justify-content: center;
+  justify-items: center;
+  position: relative;
+  padding-top: 100px;
+}
+
+/* Map */
 .InfoPopUp {
   position: absolute;
   display: grid;
