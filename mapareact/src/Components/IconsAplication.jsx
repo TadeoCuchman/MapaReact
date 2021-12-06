@@ -12,24 +12,27 @@ const IconsAplications = (props) => {
 
     return (
         <>
-            <>
+            <div>
                 <button><TurnRight/></button>
-                <span>Indications</span>
-            </>
-            <>
+                
+                <p>Indications</p>
+            </div>
+            <div>
                 <button><Share/></button>
-                <span>Share</span>
-            </>
+                <p>Share</p>
+            </div>
+            <div>
                 <button><Save/></button>
-                <span>Save</span>
-            <>
+                <p>Save</p>
+            </div>
+            <div>
                 <button><CloseTo/></button>
-                <span>Close to:</span>
-            </>
-            <>
+                <p>Close to</p>
+            </div>
+            <div>
                 <button><World/></button>
-                <span>Link</span>
-            </>
+                <p>Link</p>
+            </div>
         </>
     );
 }
