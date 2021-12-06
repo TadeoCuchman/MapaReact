@@ -4,8 +4,8 @@ import {Link} from 'react-router-dom'
 
 const Home = () => {
     const [state, setState] = useState({
-        longitude: 0,
-        latitude: 0,
+        lat: 0,
+        lng: 0,
     })
 
 

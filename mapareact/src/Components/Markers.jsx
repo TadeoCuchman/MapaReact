@@ -6,8 +6,6 @@ import {IconLocation, IconCurrentLocation} from '../Components/IconLocation.jsx'
 const Markers = (props) => {
     const places = props.places
 
-    console.log(props.activePlace)
-
 
     return (
         <>
@@ -15,7 +13,8 @@ const Markers = (props) => {
                 key={-1}
                 name={'My Location'}
                 position={props.location} 
-                icon={IconCurrentLocation}/>
+                icon={IconCurrentLocation}
+                eventHandlers={{ click: () => props.setActivePlace({name: 'My Location', geometry: props.location}) }}/>
                 
            {places.map(place => (
                <Marker 
@@ -23,11 +22,13 @@ const Markers = (props) => {
                name={place.name}
                position={place.geometry} 
                icon={IconLocation}
-               eventHandlers={{ click: () => props.activePlace ? null :props.setActivePlace(place) }} 
+               eventHandlers={{ click: () => props.activePlace === place ? props.setActivePlace(null) : props.setActivePlace(place) }} 
                />
            ))}
 
-            <Popup position={props.location} >
+            <Popup 
+            position={props.location} 
+            >
                 <div>
                     Hello! This is your location!
                 </div>
