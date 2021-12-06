@@ -57,7 +57,7 @@ const MapView = () => {
     return (
         <>
         <Searcher setActivePlace={setActivePlace} activePlace={activePlace}/>
-        <MapContainer center = {state.currentLocation} zoom={state.zoom} minZoom={2}  setMaxBounds={-79.9250244466117, -94.2151848874246} maxBoundsViscosity= {1.0}>
+        <MapContainer center = {state.currentLocation} zoom={state.zoom} minZoom={2} >
             <TileLayer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'/>
             <Markers places={places} location={location.state} setActivePlace={setActivePlace} activePlace={activePlace}/>
         </MapContainer>
