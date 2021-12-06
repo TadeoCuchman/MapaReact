@@ -1,10 +1,11 @@
 {
   "name": "mapareact",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
   "homepage": ".",
   "dependencies": {
     "leaflet": "^1.7.1",
+    "netlify-cli": "^8.0.15",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-leaflet": "^3.2.2",
