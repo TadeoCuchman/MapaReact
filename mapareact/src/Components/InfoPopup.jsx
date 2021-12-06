@@ -5,13 +5,14 @@ import IconsAplication from './IconsAplication'
 
 const Home = (props) => {
     const nodeRef = React.useRef(null)
-    console.log(props.path)
+
     return (
         <CSSTransition nodeRef={nodeRef} in={true} appear={true} timeout={100} classNames="popUp">
             <div ref={nodeRef} className='InfoPopUp'>
                 
                 <div className='photo'>
-                    <img className='image' src={`${props.path}`} alt={`city of ${props.name}`} />
+                    {props.path !== null &&
+                    <img className='image' src={`${props.path}`} alt={`city of ${props.name}`} />}
                 </div>
                 <div className='name'>
                     <h2>{props.name}</h2>

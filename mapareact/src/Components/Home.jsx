@@ -4,8 +4,8 @@ import {Link} from 'react-router-dom'
 
 const Home = () => {
     const [state, setState] = useState({
-        lat: 0,
-        lng: 0,
+        lat: null,
+        lng: null,
     })
 
 
@@ -31,7 +31,11 @@ const Home = () => {
             <p>latitude: {state.lat}</p>
             <p>longitude: {state.lng}</p>
 
-            <Link state={state} to={'/map'}>See My Location</Link>
+            {state.lat && state.lng ?
+            <Link state={state} to={'/map'}>See My Location</Link> : 
+            <Link state={state} to={'/map'}>Enter without Location</Link> 
+            }
+
         </div>
     );
 }
