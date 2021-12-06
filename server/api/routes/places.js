@@ -7,92 +7,136 @@ router.get('/', async (req, res) => {
         // hardcoded data who could given from a DB or another API.
         const places =  [
             {
-                "description": "Punta del Este es un balneario que se encuentra en una angosta península del sudeste de Uruguay.",
+                "description": "Punta del Este is a city on the Athlantic coast on the southeast of Uruguay.",
                 "name": "Punta del Este",
+                "country": "Uruguay",
                 "geometry": [
                     -34.94984651927502,
                     -54.93287007462969
-                ]
+                ],
+                "image": {
+                    "path":"/CityImages/punta_del_este.jpeg"
+                }
             },
             {
-                "description": "Buenos Aires es la gran capital cosmopolita de Argentina. ",
+                "description": "Buenos Aires is the cosmopolitan capital city of Argentina. ",
                 "name": "Buenos Aires",
+                "country": "Argentina",
                 "geometry": [
                     -34.594267258005196,
                     -58.40996080828613
-                ]
+                ],
+                "image": {
+                    "path":"/CityImages/buenos_aires.jpeg"
+                }
             },
             {
-                "description": "Colonia del Sacramento es una ciudad del suroeste de Uruguay, al otro lado del Río de la Plata de Buenos Aires.",
+                "description": "Colonia del Sacramento is a city of the southweast of Uruguay, at the other side of El Río de la Plata from Buenos Aires.",
                 "name": "Colonia del Sacramento",
+                "country": "Uruguay",
                 "geometry": [
                     -34.46307452944715,
                     -57.83594772383762
-                ]
+                ],
+                "image": {
+                    "path":"/CityImages/colonia.jpeg"
+                }
             },
             {
-                "description": "Paysandú es una localidad uruguaya situada al norte del país. ",
+                "description": "Paysandú is a Uruguayan location on the north of the country. ",
                 "name": "Paysandu",
+                "country": "Uruguay",
                 "geometry": [
                     -32.315394562065315,
                     -58.08587770480305
-                ]
+                ],
+                "image": {
+                    "path":"/CityImages/paysandu.jpeg"
+                }
             },
             {
-                "description": "Florida es una ciudad en la República Oriental del Uruguay. Capital del departamento homónimo.",
+                "description": "Florida is a city of La República Oriental del Uruguay. Capital of his state with same name.",
                 "name": "Florida",
+                "country": "Uruguay",
                 "geometry": [
                     -34.09723376708202,
                     -56.21844517868587
-                ]
+                ],
+                "image": {
+                    "path":"/CityImages/florida.jpeg"
+                }
             },
             {
-                "description": "Porto Alegre es la capital del estado de Río Grande del Sur, en el sur de Brasil.",
+                "description": "Porto Alegre is the capital of Rio Branco on the south of Brasil.",
                 "name": "Porto Alegre",
+                "country": "Brasil",
                 "geometry": [
                     -29.984971915621838,
                     -51.182243785605245
-                ]
+                ],
+                "image": {
+                    "path":"/CityImages/porto_alegre.jpeg"
+                }
             },
             {
-                "description": "Santiago, la capital y la ciudad más grande de Chile, se ubica en un valle rodeado de cimas nevadas de los Andes y la Cordillera de la Costa chilena.",
+                "description": "Santiago, the Capital and biggest city of Chile, she's located on a vast valley surronded by the snowed mountains of Los Andes and the coast.",
                 "name": "Santiago de Chile",
+                "country": "Chile",
                 "geometry": [
                     -33.46674485000803, 
                     -70.69578307991213
-                ]
+                ],
+                "image": {
+                    "path":"/CityImages/santiago_de_chile.jpeg"
+                }
             },
             {
-                "description": "Lima es la capital de Perú ubicada en la árida costa del Pacífico del país. ",
+                "description": "Lima is the Peruvian capital, located on the Pacific coast of the country. ",
                 "name": "Lima",
+                "country": "Peru",
                 "geometry": [
                     -12.042615885574968, 
                     -77.02215339988183
-                ]
+                ],
+                "image": {
+                    "path":"/CityImages/lima.jpeg"
+                }
             },
             {
-                "description": "París, la capital de Francia, es una importante ciudad europea y un centro mundial del arte, la moda, la gastronomía y la cultura. ",
+                "description": "París, France capital, it's an important European city and an multinational center of art, fashon, gastronomi and curture. ",
                 "name": "Paris",
+                "country": "France",
                 "geometry": [
                     48.84973407948415, 
                     2.338101056877952
-                ]
+                ],
+                "image": {
+                    "path":"/CityImages/paris.jpeg"
+                }
             },
             {
-                "description": "Berlín, capital alemana, data del siglo XIII.",
+                "description": "Berlín, german capital, dated from XIIIs.",
                 "name": "Berlin",
+                "country": "Germany",
                 "geometry": [
                     52.48210919600182, 
                     13.380679904674306
-                ]
+                ],
+                "image": {
+                    "path":"/CityImages/berlin.jpeg"
+                }
             },
             {
                 "description": "Montevideo, la capital de Uruguay, es una importante ciudad de la Bahía de Montevideo.",
                 "name": "Montevideo",
+                "country": "Uruguay",
                 "geometry": [
                     -34.86948147614695, 
                     -56.16572248414447
-                ]
+                ],
+                "image": {
+                    "path":"/CityImages/montevideo.jpeg"
+                }
             }
         ]
     
