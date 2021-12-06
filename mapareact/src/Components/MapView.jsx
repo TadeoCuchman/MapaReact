@@ -20,20 +20,9 @@ const MapView = () => {
     const location = useLocation()
     
 
-    console.log(activePlace)
 
 
     useEffect(() => {
-        //no se porque no funciona esto
-        if(location.state.lat){
-            const  currentLocation = {lat: `${location.state.latitude}` ,lng:`${location.state.longitude}`}
-            setState({
-               currentLocation,
-                zoom:'8'
-            })
-            console.log(state)
-        }
- 
         chargeLocations()
     },[])
 
