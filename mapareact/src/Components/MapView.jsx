@@ -30,7 +30,7 @@ const MapView = () => {
 
     const chargeLocations = async () => {
         try{
-            await fetch('http://localhost:5000/places', {
+            await fetch('https://countrysapi12.herokuapp.com/places', {
                 method: "GET",
                 headers: {
                     "Content-Type" : "application/json",
