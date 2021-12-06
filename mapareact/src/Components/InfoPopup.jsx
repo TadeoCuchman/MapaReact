@@ -22,7 +22,7 @@ const Home = (props) => {
                     <IconsAplication/>
                 </div>
                 <div className='description'>
-                    <h3>Basic Data:</h3>
+                    <h4>Basic Data:</h4>
                     <p>{props.description}</p>
 
                 </div>
