@@ -50,7 +50,7 @@ const MapView = () => {
                 }).then(response => response.json())
                 .then(data => setPlaces(data.places))
         }catch (err) {
-            alert('No conexión con Servidor')
+            alert('No conexión with Server.')
         }
     }
 
