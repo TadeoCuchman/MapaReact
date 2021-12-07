@@ -2,10 +2,14 @@
   width: 100vw;
   height: 100vh;
 }
+.leaflet-control-container .leaflet-control-attribution {
+  right: -100px;
+}
 
 .leaflet-control-container {
   position: absolute;
   right: 56px;
+  bottom: 15%;
 }
 /* Home */
 
@@ -38,7 +42,7 @@
   height: 100vh;
   z-index: 1000;
   background-color: white;
-  box-shadow: 1px 1px 8px rgb(180, 180, 180);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 30%);
   overflow: auto;
 }
 
@@ -126,9 +130,15 @@
 
 /*  */
 
-.searcher {
+.searcherContainer {
   position: fixed;
   z-index: 1100;
+  width: 100vw;
+  right: 0;
+  top: 0;
+}
+
+.searcher {
   left: 0;
   top: 0;
   width: 392px;
@@ -178,4 +188,28 @@ button:hover {
 
 input:focus {
   outline: none;
+}
+
+@media (max-width: 414px) {
+  .leaflet-control-container {
+    display: none;
+  }
+
+  .InfoPopUp {
+    grid-template-areas:
+      "photo"
+      "name"
+      "aplications"
+      "description"
+      "photos";
+    grid-template-columns: auto;
+    grid-template-rows: 4fr 1fr 100px 6fr 2fr;
+    bottom: -100vh;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .searcher {
+    width: 96%;
+  }
 }
