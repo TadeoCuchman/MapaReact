@@ -23,6 +23,11 @@ const MapView = () => {
 
 
     useEffect(() => {
+        if(location.state.lat && location.state.lng){
+            const  currentLocation = {lat: `${location.state.latitude}` ,lng:`${location.state.longitude}`}
+            setState({...state, currentLocation})
+        }
+ 
         chargeLocations()
     },[])
 
@@ -47,7 +52,7 @@ const MapView = () => {
         <>
         <Searcher setActivePlace={setActivePlace} activePlace={activePlace}/>
         <MapContainer center = {state.currentLocation} zoom={state.zoom} minZoom={2} >
-            <TileLayer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'/>
+            <TileLayer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
             <Markers places={places} location={location.state} setActivePlace={setActivePlace} activePlace={activePlace}/>
         </MapContainer>
         {activePlace !== null && 
