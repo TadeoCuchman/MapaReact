@@ -12,17 +12,17 @@ const Searcher = (props) => {
 
 
     return (
-        <div className='searcher'>
-            <button className='searchButtom'><Menu/></button>   
-            <input type='text' />
-            <button className='searchButtom'><Loup/></button>   
-            <div className='line'><Line/></div>
-            {props.activePlace !== null ? 
-            <button className='searchButtom'onClick={() => props.setActivePlace(null)}><Close/></button> :
-            <button className='searchButtom'><TurnRight/></button>   
-            } 
-
-
+        <div className='searcherContainer'>
+            <div className='searcher'>
+                <button className='searchButtom'><Menu/></button>   
+                <input type='text' />
+                <button className='searchButtom'><Loup/></button>   
+                <div className='line'><Line/></div>
+                {props.activePlace !== null ? 
+                <button className='searchButtom'onClick={() => props.setActivePlace(null)}><Close/></button> :
+                <button className='searchButtom'><TurnRight/></button>   
+                }
+            </div>
         </div>
     );
 }
