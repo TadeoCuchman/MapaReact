@@ -3,7 +3,7 @@ import { CSSTransition } from "react-transition-group";
 
 import IconsAplication from './IconsAplication'
 
-const Home = (props) => {
+const InfoPopUp = (props) => {
     const nodeRef = React.useRef(null)
 
     return (
@@ -35,4 +35,4 @@ const Home = (props) => {
     );
 }
 
-export default Home;
+export default InfoPopUp;
