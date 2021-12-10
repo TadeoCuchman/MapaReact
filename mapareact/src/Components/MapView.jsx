@@ -16,6 +16,8 @@ const MapView = () => {
         zoom:'3'
     })
     const [activePlace, setActivePlace] = useState(null)
+    const [search, setSearch] = useState(null)
+
     
     const location = useLocation()
     
@@ -27,9 +29,11 @@ const MapView = () => {
             const  currentLocation = {lat: `${location.state.latitude}` ,lng:`${location.state.longitude}`}
             setState({...state, currentLocation})
         }
- 
         chargeLocations()
     },[])
+
+
+  
 
    
 
@@ -50,12 +54,12 @@ const MapView = () => {
 
     return (
         <>
-        <Searcher setActivePlace={setActivePlace} activePlace={activePlace}/>
+        <Searcher setActivePlace={setActivePlace} activePlace={activePlace} search={search} setSearch={setSearch} places={places}/>
         <MapContainer center = {state.currentLocation} zoom={state.zoom} minZoom={2} >
             <TileLayer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
-            <Markers places={places} location={location.state} setActivePlace={setActivePlace} activePlace={activePlace}/>
+            <Markers places={places} location={location.state} setActivePlace={setActivePlace} activePlace={activePlace} search={search} setSearch={setSearch}/>
         </MapContainer>
-        {activePlace !== null && 
+        {(activePlace !== null) && 
         <InfoPopup 
             name={activePlace.name}
             country={activePlace.country} 
