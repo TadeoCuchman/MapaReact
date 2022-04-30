@@ -39,11 +39,10 @@ const MapView = () => {
 
     const chargeLocations = async () => {
         try{
-            await fetch('https://countrysapi12.herokuapp.com/places', {
+            await fetch('http://localhost:5000/places', {
                 method: "GET",
                 headers: {
                     "Content-Type" : "application/json",
-                    "auth-token" : localStorage.getItem("jwt")
                 },
                 }).then(response => response.json())
                 .then(data => setPlaces(data.places))
@@ -66,6 +65,7 @@ const MapView = () => {
             description={activePlace.description} 
             geometry={activePlace.geometry}
             path={activePlace.image.path}
+            address={activePlace.address}
             />}
         </>
 

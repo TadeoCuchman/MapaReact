@@ -14,7 +14,6 @@ const IconsAplications = (props) => {
         <>
             <div>
                 <button><TurnRight/></button>
-                
                 <p>Indications</p>
             </div>
             <div>

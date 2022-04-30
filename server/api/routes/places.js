@@ -130,6 +130,7 @@ router.get('/', async (req, res) => {
                 "description": "Montevideo, la capital de Uruguay, es una importante ciudad de la Bahía de Montevideo.",
                 "name": "Montevideo",
                 "country": "Uruguay",
+                "address" : "Enrique Tarigo 1322",
                 "geometry": [
                     -34.86948147614695, 
                     -56.16572248414447

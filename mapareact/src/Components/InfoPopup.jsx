@@ -5,7 +5,7 @@ import IconsAplication from './IconsAplication'
 
 const InfoPopUp = (props) => {
     const nodeRef = React.useRef(null)
-
+    console.log(props)
     return (
         <CSSTransition nodeRef={nodeRef} in={true} appear={true} timeout={100} classNames="popUp">
             <div ref={nodeRef} className='InfoPopUp'>
@@ -25,6 +25,8 @@ const InfoPopUp = (props) => {
                 <div className='description'>
                     <h4>Basic Data:</h4>
                     <p>{props.description}</p>
+                    {props.address &&
+                    <p>Address: {props.address}</p>}
 
                 </div>
                 <div className='photos'>

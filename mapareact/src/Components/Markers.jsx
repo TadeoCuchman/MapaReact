@@ -29,11 +29,11 @@ const Markers = (props) => {
 
                 {places.map(place => (
                     <Marker 
-                    key={place.name}
-                    name={place.name}
-                    position={place.geometry} 
-                    icon={IconLocation}
-                    eventHandlers={{ click: () => props.activePlace === place ? props.setActivePlace(null) : props.setActivePlace(place) }} 
+                        key={place.name}
+                        name={place.name}
+                        position={place.geometry} 
+                        icon={IconLocation}
+                        eventHandlers={{ click: () => props.activePlace === place ? props.setActivePlace(null) : props.setActivePlace(place) }} 
                     />
                 ))}
             
